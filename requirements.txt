@@ -1,0 +1,4 @@
+nlzss
+pycryptodome
+requests
+rsa
