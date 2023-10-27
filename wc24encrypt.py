@@ -82,9 +82,8 @@ if args.type[0] == "enc":
 elif args.type[0] == "dec":
     processed = data
 
-content = {}
+content = {"magic": b"WC24" if args.type[0] == "enc" else u32(0)}
 
-content["magic"] = b"WC24" if args.type[0] == "enc" else u32(0)
 content["version"] = u32(1) if args.type[0] == "enc" else u32(0)
 content["filler"] = u32(0)
 content["crypt_type"] = u8(1) if args.type[0] == "enc" else u8(0)
